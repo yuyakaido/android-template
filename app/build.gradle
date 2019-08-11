@@ -17,6 +17,8 @@ android {
 }
 
 dependencies {
+  implementation project(':core-java')
+
   implementation libs.kotlin.stdlib
   implementation libs.androidx.appcompat
   implementation libs.androidx.constraintlayout
