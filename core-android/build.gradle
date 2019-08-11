@@ -1,0 +1,11 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion versions.compilesdk
+}
+
+dependencies {
+  api project(':core-java')
+  implementation libs.kotlin.stdlib
+}
