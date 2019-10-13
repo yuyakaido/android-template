@@ -5,21 +5,32 @@ apply plugin: 'kotlin-kapt'
 android {
   compileSdkVersion versions.compilesdk
   defaultConfig {
-    applicationId "com.yuyakaido.android.template"
     minSdkVersion versions.minsdk
     targetSdkVersion versions.targetsdk
+    applicationId "com.yuyakaido.android.template"
     versionCode 1
     versionName "1.0.0"
   }
   dataBinding {
     enabled = true
   }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = JavaVersion.VERSION_1_8
+  }
 }
 
 dependencies {
+  // Module
   implementation project(':core-android')
 
+  // Kotlin
   implementation libs.kotlin.stdlib
+
+  // AndroidX
   implementation libs.androidx.appcompat
   implementation libs.androidx.constraintlayout
 }
