@@ -12,7 +12,7 @@ ext.versions = [
 
   // AndroidX
   androidx: [
-    appcompat: '1.0.2',
+    appcompat: '1.1.0',
     constraintlayout: '1.1.3'
   ]
 ]
